@@ -35,7 +35,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-5 md:px-10 flex items-center justify-between h-20 md:h-24">
         {/* Logo */}
         <a href="#hero" className="flex items-center">
-          <img src="/logo.png" alt="RIA~Artistry" className="h-14 md:h-20 w-auto object-contain" />
+          <img src="./logo.png" alt="RIA~Artistry" className="h-14 md:h-20 w-auto object-contain" />
         </a>
 
         {/* Desktop nav */}
@@ -78,21 +78,21 @@ function Navbar() {
 // ─── Hero / Billboard Slider ────────────────────────────────────────────────
 const heroSlides = [
   {
-    image: '/image-services/gele2.jpeg',
+    image: './image-services/gele2.jpeg',
     tag: 'Bridal Makeup',
     heading: 'Flawless Bridal Beauty',
     sub: 'Your wedding day deserves perfection — timeless, radiant, unforgettable.',
     overlay: 'Confidence. Beauty. Elegance.',
   },
   {
-    image: '/image-services/birthday-model-makeup-glam.jpeg',
+    image: './image-services/birthday-model-makeup-glam.jpeg',
     tag: 'Soft Glam',
     heading: 'Soft Glam. Bold Confidence.',
     sub: 'Enhancing your natural beauty with a luxurious, polished finish.',
     overlay: 'Soft Glam. Bold Confidence.',
   },
   {
-    image: '/image-services/gele1.jpeg',
+    image: './image-services/gele1.jpeg',
     tag: 'Gele Styling',
     heading: 'Elegant Gele & Hair Artistry',
     sub: 'Traditional elegance reimagined — every knot tells a story of grace.',
@@ -226,14 +226,14 @@ function Hero() {
 
 // ─── Services ──────────────────────────────────────────────────────────────
 const services = [
-  { name: 'Bridal Makeup',               price: '₦100,000',  Icon: Gem,      popular: false, image: '/image-services/gele2.jpeg' },
-  { name: 'Traditional Bridal Makeup',   price: '₦120,000',  Icon: Crown,    popular: true,  image: '/image-services/makeup-gele3.png' },
-  { name: 'Soft Glam',                   price: '₦35,000',   Icon: Sparkles, popular: false, image: '/image-services/soft-glam-makeup1.png' },
-  { name: 'Full Glam',                   price: '₦40,000',   Icon: Palette,  popular: false, image: '/image-services/full-glam-makeup1.png' },
-  { name: 'Studio Session',              price: '₦35,000',   Icon: Camera,   popular: false, image: '/image-services/birthday-model-makeup-glam.jpeg' },
-  { name: 'Home Service',                price: '₦50,000+',  Icon: Home,     popular: false, image: '/image-services/soft-glam-makeup4.png', note: 'Extra charges may apply' },
-  { name: 'Gele Styling',                price: '₦20,000',   Icon: Ribbon,   popular: false, image: '/image-services/gele1.jpeg' },
-  { name: 'Hairstyling / Wig Install',   price: '₦15,000+',  Icon: Scissors, popular: false, image: '/image-services/soft-glam-makeup2.jpeg' },
+  { name: 'Bridal Makeup',               price: '₦100,000',  Icon: Gem,      popular: false, image: './image-services/gele2.jpeg' },
+  { name: 'Traditional Bridal Makeup',   price: '₦120,000',  Icon: Crown,    popular: true,  image: './image-services/makeup-gele3.png' },
+  { name: 'Soft Glam',                   price: '₦35,000',   Icon: Sparkles, popular: false, image: './image-services/soft-glam-makeup1.png' },
+  { name: 'Full Glam',                   price: '₦40,000',   Icon: Palette,  popular: false, image: './image-services/full-glam-makeup1.png' },
+  { name: 'Studio Session',              price: '₦35,000',   Icon: Camera,   popular: false, image: './image-services/birthday-model-makeup-glam.jpeg' },
+  { name: 'Home Service',                price: '₦50,000+',  Icon: Home,     popular: false, image: './image-services/soft-glam-makeup4.png', note: 'Extra charges may apply' },
+  { name: 'Gele Styling',                price: '₦20,000',   Icon: Ribbon,   popular: false, image: './image-services/gele1.jpeg' },
+  { name: 'Hairstyling / Wig Install',   price: '₦15,000+',  Icon: Scissors, popular: false, image: './image-services/soft-glam-makeup2.jpeg' },
 ]
 
 function Services() {
@@ -301,15 +301,15 @@ function Services() {
 
 // ─── About ─────────────────────────────────────────────────────────────────
 const aboutImages = [
-  '/image-services/soft-glam-makeup3.png',
-  '/image-services/full-glam-makeup1.png',
-  '/image-services/birthday-model-makeup-glam.jpeg',
-  '/image-services/gele1.jpeg',
-  '/image-services/gele2.jpeg',
-  '/image-services/makeup-gele3.png',
-  '/image-services/soft-glam-makeup1.png',
-  '/image-services/soft-glam-makeup2.jpeg',
-  '/image-services/soft-glam-makeup4.png',
+  './image-services/soft-glam-makeup3.png',
+  './image-services/full-glam-makeup1.png',
+  './image-services/birthday-model-makeup-glam.jpeg',
+  './image-services/gele1.jpeg',
+  './image-services/gele2.jpeg',
+  './image-services/makeup-gele3.png',
+  './image-services/soft-glam-makeup1.png',
+  './image-services/soft-glam-makeup2.jpeg',
+  './image-services/soft-glam-makeup4.png',
   
 ]
 
@@ -385,15 +385,15 @@ function About() {
 
 // ─── Gallery ───────────────────────────────────────────────────────────────
 const galleryItems = [
-  { src: '/image-services/birthday-model-makeup-glam.jpeg', type: 'image', label: 'Birthday Glam' },
-  { src: '/image-services/full-glam-makeup1.png',          type: 'image', label: 'Full Glam' },
-  { src: '/image-services/gele1.jpeg',                     type: 'image', label: 'Gele Styling' },
-  { src: '/image-services/gele2.jpeg',                     type: 'image', label: 'Traditional Gele' },
-  { src: '/image-services/image23.png',                    type: 'image', label: 'Elegant Look' },
-  { src: '/image-services/makeup-gele3.png',               type: 'image', label: 'Makeup & Gele' },
-  { src: '/image-services/soft-glam-makeup1.png',          type: 'image', label: 'Soft Glam' },
-  { src: '/image-services/soft-glam-makeup2.jpeg',         type: 'image', label: 'Soft Glam' },
-  { src: '/image-services/soft-glam-makeup4.png',          type: 'image', label: 'Soft Glam' },
+  { src: './image-services/birthday-model-makeup-glam.jpeg', type: 'image', label: 'Birthday Glam' },
+  { src: './image-services/full-glam-makeup1.png',          type: 'image', label: 'Full Glam' },
+  { src: './image-services/gele1.jpeg',                     type: 'image', label: 'Gele Styling' },
+  { src: './image-services/gele2.jpeg',                     type: 'image', label: 'Traditional Gele' },
+  { src: './image-services/image23.png',                    type: 'image', label: 'Elegant Look' },
+  { src: './image-services/makeup-gele3.png',               type: 'image', label: 'Makeup & Gele' },
+  { src: './image-services/soft-glam-makeup1.png',          type: 'image', label: 'Soft Glam' },
+  { src: './image-services/soft-glam-makeup2.jpeg',         type: 'image', label: 'Soft Glam' },
+  { src: './image-services/soft-glam-makeup4.png',          type: 'image', label: 'Soft Glam' },
 ]
 
 function GalleryItem({ item }) {
@@ -452,11 +452,11 @@ function Gallery() {
 
 // ─── Testimonials ──────────────────────────────────────────────────────────
 const screenshotTestimonials = [
-  '/Testimonial/image37.png',
-  '/Testimonial/image39.png',
-  '/Testimonial/image41.png',
-  '/Testimonial/image44.png',
-  '/Testimonial/image45.png',
+  './Testimonial/image37.png',
+  './Testimonial/image39.png',
+  './Testimonial/image41.png',
+  './Testimonial/image44.png',
+  './Testimonial/image45.png',
 ]
 
 function ScreenshotCard({ src, i }) {
@@ -660,7 +660,7 @@ function CTABanner() {
   return (
     <section className="relative py-20 md:py-28 overflow-hidden">
       <div className="absolute inset-0">
-        <img src="/image-services/makeup-gele3.png" alt="CTA background" className="w-full h-full object-cover object-center" />
+        <img src="./image-services/makeup-gele3.png" alt="CTA background" className="w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-black/65" />
       </div>
       <div className="relative z-10 max-w-4xl mx-auto px-5 md:px-10 text-center">
