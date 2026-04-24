@@ -433,9 +433,9 @@ function Gallery() {
           <p className="font-sans text-xs tracking-[0.3em] uppercase text-gold mb-8 text-center">Featured Videos</p>
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-[260px] sm:w-[300px]">
-              <div className="aspect-[9/16] rounded-2xl overflow-hidden bg-gray-900 shadow-md">
+              <div className="aspect-[4/12] rounded-2xl overflow-hidden bg-gray-900 shadow-md">
                 <video
-                  src="./our-work-video.mp4"
+                  src="./soft-faceofria-video.mp4"
                   className="w-full h-full object-cover"
                   autoPlay
                   muted
@@ -443,12 +443,12 @@ function Gallery() {
                   playsInline
                 />
               </div>
-              <p className="font-sans text-xs text-center text-gray-500 mt-3">Before &amp; After — Soft Glam</p>
+              <p className="font-sans text-xs text-center text-gray-500 mt-3">Our Soft Glam</p>
             </div>
             <div className="w-[260px] sm:w-[300px]">
               <div className="aspect-[9/16] rounded-2xl overflow-hidden bg-gray-900 shadow-md">
                 <video
-                  src="./soft-faceofria-video.mp4"
+                  src="./our-work-video.mp4"
                   className="w-full h-full object-cover"
                   autoPlay
                   muted
@@ -786,13 +786,13 @@ function Footer() {
           <div>
             <p className="font-sans text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-5">Follow Us</p>
             <div className="flex flex-col gap-4">
-              <a href="https://instagram.com/ria~artistry" target="_blank" rel="noreferrer"
+              <a href="https://www.instagram.com/faceofria" target="_blank" rel="noreferrer"
                 className="flex items-center gap-3 text-gray-400 hover:text-pink-400 transition-colors duration-200 group">
                 <div className="w-9 h-9 rounded-full bg-gray-800 group-hover:bg-pink-500/20 flex items-center justify-center transition-colors duration-200">
                   <Instagram size={16} />
                 </div>
                 <div>
-                  <p className="font-sans text-sm font-medium">Ria~Artistry</p>
+                  <p className="font-sans text-sm font-medium">@faceofria</p>
                   <p className="font-sans text-[11px] text-gray-600">Instagram</p>
                 </div>
               </a>
