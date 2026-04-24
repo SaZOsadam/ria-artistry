@@ -98,6 +98,14 @@ const heroSlides = [
     sub: 'Traditional elegance reimagined — every knot tells a story of grace.',
     overlay: 'Radiance. Grace. Power.',
   },
+  {
+    video: '7530340532350979384',
+    poster: './image-services/birthday-model-makeup-glam.jpeg',
+    tag: 'Birthday Glam',
+    heading: 'Birthday Makeup Reveal',
+    sub: 'Glam transformations for your most special celebrations.',
+    overlay: 'Glow. Celebrate. Shine.',
+  },
 ]
 
 function Hero() {
@@ -163,17 +171,28 @@ function Hero() {
             </div>
           </div>
         </div>
-        {/* Right: image panel */}
-        <div key={current} className="slide-fade flex-1 relative">
-          <img src={slide.image} alt={slide.tag} className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-950/40 to-transparent" />
+        {/* Right: image or video panel */}
+        <div key={current} className="slide-fade flex-1 relative overflow-hidden bg-gray-900">
+          {slide.video ? (
+            <iframe
+              src={`https://www.tiktok.com/embed/v2/${slide.video}`}
+              className="absolute inset-0 w-full h-full"
+              allow="encrypted-media"
+              allowFullScreen
+            />
+          ) : (
+            <>
+              <img src={slide.image} alt={slide.tag} className="w-full h-full object-cover object-center" />
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-950/40 to-transparent" />
+            </>
+          )}
         </div>
       </div>
 
       {/* ── Mobile: full-bleed ── */}
       <div className="md:hidden h-full relative">
         <div key={`m-${current}`} className="slide-fade absolute inset-0">
-          <img src={slide.image} alt={slide.tag} className="w-full h-full object-cover object-top" />
+          <img src={slide.poster || slide.image} alt={slide.tag} className="w-full h-full object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
@@ -300,39 +319,20 @@ function Services() {
 }
 
 // ─── About ─────────────────────────────────────────────────────────────────
-const aboutImages = [
-  './image-services/soft-glam-makeup3.png',
-  './image-services/full-glam-makeup1.png',
-  './image-services/birthday-model-makeup-glam.jpeg',
-  './image-services/gele1.jpeg',
-  './image-services/gele2.jpeg',
-  './image-services/makeup-gele3.png',
-  './image-services/soft-glam-makeup1.png',
-  './image-services/soft-glam-makeup2.jpeg',
-  './image-services/soft-glam-makeup4.png',
-]
-
 function About() {
-  const [imgIdx, setImgIdx] = useState(0)
-
-  useEffect(() => {
-    const t = setInterval(() => setImgIdx(p => (p + 1) % aboutImages.length), 4000)
-    return () => clearInterval(t)
-  }, [])
-
   return (
     <section id="about" className="py-20 md:py-28 bg-nude-light">
       <div className="max-w-6xl mx-auto px-5 md:px-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image side */}
           <div className="relative">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl relative">
-              {aboutImages.map((src, i) => (
-                <img key={src} src={src} alt="RIA~Artistry — About"
-                  className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
-                    i === imgIdx ? 'opacity-100' : 'opacity-0'
-                  }`} />
-              ))}
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl bg-gray-900">
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7622738047666294024"
+                className="w-full h-full"
+                allow="encrypted-media"
+                allowFullScreen
+              />
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-5 -right-3 md:right-[-20px] bg-white rounded-2xl shadow-lg px-5 py-4 flex items-center gap-3">
@@ -443,6 +443,35 @@ function Gallery() {
           {galleryItems.map((item, i) => (
             <GalleryItem key={i} item={item} />
           ))}
+        </div>
+
+        {/* Featured Videos */}
+        <div className="mt-12">
+          <p className="font-sans text-xs tracking-[0.3em] uppercase text-gold mb-8 text-center">Featured Videos</p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <div className="w-[260px] sm:w-[300px]">
+              <div className="aspect-[9/16] rounded-2xl overflow-hidden bg-gray-900 shadow-md">
+                <iframe
+                  src="https://www.tiktok.com/embed/v2/7508336334390529285"
+                  className="w-full h-full"
+                  allow="encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+              <p className="font-sans text-xs text-center text-gray-500 mt-3">Before &amp; After — Soft Glam</p>
+            </div>
+            <div className="w-[260px] sm:w-[300px]">
+              <div className="aspect-[9/16] rounded-2xl overflow-hidden bg-gray-900 shadow-md">
+                <iframe
+                  src="https://www.tiktok.com/embed/v2/7512154738327063814"
+                  className="w-full h-full"
+                  allow="encrypted-media"
+                  allowFullScreen
+                />
+              </div>
+              <p className="font-sans text-xs text-center text-gray-500 mt-3">Traditional Bridal with Gele</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
