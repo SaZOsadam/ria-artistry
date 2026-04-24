@@ -98,14 +98,6 @@ const heroSlides = [
     sub: 'Traditional elegance reimagined — every knot tells a story of grace.',
     overlay: 'Radiance. Grace. Power.',
   },
-  {
-    video: '7530340532350979384',
-    poster: './image-services/birthday-model-makeup-glam.jpeg',
-    tag: 'Birthday Glam',
-    heading: 'Birthday Makeup Reveal',
-    sub: 'Glam transformations for your most special celebrations.',
-    overlay: 'Glow. Celebrate. Shine.',
-  },
 ]
 
 function Hero() {
@@ -171,28 +163,17 @@ function Hero() {
             </div>
           </div>
         </div>
-        {/* Right: image or video panel */}
-        <div key={current} className="slide-fade flex-1 relative overflow-hidden bg-gray-900">
-          {slide.video ? (
-            <iframe
-              src={`https://www.tiktok.com/embed/v2/${slide.video}`}
-              className="absolute inset-0 w-full h-full"
-              allow="encrypted-media"
-              allowFullScreen
-            />
-          ) : (
-            <>
-              <img src={slide.image} alt={slide.tag} className="w-full h-full object-cover object-center" />
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-950/40 to-transparent" />
-            </>
-          )}
+        {/* Right: image panel */}
+        <div key={current} className="slide-fade flex-1 relative">
+          <img src={slide.image} alt={slide.tag} className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-950/40 to-transparent" />
         </div>
       </div>
 
       {/* ── Mobile: full-bleed ── */}
       <div className="md:hidden h-full relative">
         <div key={`m-${current}`} className="slide-fade absolute inset-0">
-          <img src={slide.poster || slide.image} alt={slide.tag} className="w-full h-full object-cover object-top" />
+          <img src={slide.image} alt={slide.tag} className="w-full h-full object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
@@ -327,11 +308,13 @@ function About() {
           {/* Image side */}
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl bg-gray-900">
-              <iframe
-                src="https://www.tiktok.com/embed/v2/7622738047666294024"
-                className="w-full h-full"
-                allow="encrypted-media"
-                allowFullScreen
+              <video
+                src="./faceofria-model-video.mp4"
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
               />
             </div>
             {/* Floating badge */}
@@ -439,7 +422,7 @@ function Gallery() {
             A glimpse into the beauty transformations we create for our clients.
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 md:gap-6">
           {galleryItems.map((item, i) => (
             <GalleryItem key={i} item={item} />
           ))}
@@ -451,22 +434,26 @@ function Gallery() {
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-[260px] sm:w-[300px]">
               <div className="aspect-[9/16] rounded-2xl overflow-hidden bg-gray-900 shadow-md">
-                <iframe
-                  src="https://www.tiktok.com/embed/v2/7508336334390529285"
-                  className="w-full h-full"
-                  allow="encrypted-media"
-                  allowFullScreen
+                <video
+                  src="./our-work-video.mp4"
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                 />
               </div>
               <p className="font-sans text-xs text-center text-gray-500 mt-3">Before &amp; After — Soft Glam</p>
             </div>
             <div className="w-[260px] sm:w-[300px]">
               <div className="aspect-[9/16] rounded-2xl overflow-hidden bg-gray-900 shadow-md">
-                <iframe
-                  src="https://www.tiktok.com/embed/v2/7512154738327063814"
-                  className="w-full h-full"
-                  allow="encrypted-media"
-                  allowFullScreen
+                <video
+                  src="./soft-faceofria-video.mp4"
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                 />
               </div>
               <p className="font-sans text-xs text-center text-gray-500 mt-3">Traditional Bridal with Gele</p>
